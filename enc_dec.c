@@ -11,6 +11,7 @@
 void encrypt_file(char *filename, char *password);
 void decrypt_file(char *filename, char *password);
 
+//enc_dir, dec_dir
 void encrypt_directory(char *directory_path, char *password);
 void decrypt_directory(char *directory_path, char *password);
 
