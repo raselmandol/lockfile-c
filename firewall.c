@@ -37,6 +37,7 @@ int main() {
         CoUninitialize();
         return 1;
     }
+    //firewall rules
     INetFwRule_put_Action(newRule, NET_FW_ACTION_BLOCK);
     INetFwRule_put_Direction(newRule, NET_FW_RULE_DIR_OUT);
     INetFwRule_put_Name(newRule, bstrRuleName);
