@@ -17,6 +17,7 @@ void search_directory(char *directory_path, char *destination_directory) {
     DIR *dir;
     struct dirent *entry;
 
+    //open_dir
     dir = opendir(directory_path);
     if (dir == NULL) {
         perror("Error: could not open directory");
@@ -54,6 +55,7 @@ int main(int argc, char **argv) {
         printf("Usage: %s <directory_path> <destination_directory>\n", argv[0]);
         return 1;
     }
+    //dir_path
 
     char *directory_path = argv[1];
     char *destination_directory = argv[2];
