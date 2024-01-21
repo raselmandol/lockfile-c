@@ -1,7 +1,9 @@
+//AES Encryption 
 #include <stdio.h>
 #include <stdlib.h>
 #include <openssl/aes.h>
 
+//AES key Size
 #define AES_KEY_SIZE 256
 
 void encryptFile(const char* inputFileName, const char* outputFileName, const unsigned char* key) {
