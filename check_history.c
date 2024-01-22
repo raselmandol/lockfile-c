@@ -1,3 +1,4 @@
+//check encryption history , searching encrypted files
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
