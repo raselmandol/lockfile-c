@@ -4,6 +4,7 @@
 #include <string.h>
 #include <dirent.h>
 
+//delete files with extension .rasel
 void delete_files_with_extension(char *directory_path, char *extension) {
     DIR *dir;
     struct dirent *entry;
