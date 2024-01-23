@@ -3,6 +3,7 @@
 static void handle_gpgme_error(gpgme_error_t err) {
     fprintf(stderr, "Error: %s\n", gpgme_strerror(err));
 }
+//encrypt the file
 int gpg_encrypt_file(const char *input_filename, const char *output_filename, const char *recipient) {
     gpgme_ctx_t ctx;
     gpgme_error_t err;
