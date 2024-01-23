@@ -1,3 +1,4 @@
+//blowfish encryption 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,7 +21,7 @@ void encryptFile(const char* inputFileName, const char* outputFileName, const un
     BF_KEY bfKey;
     BF_set_key(&bfKey, keyLength, key);
 
-    unsigned char inputBuffer[8]; // Blowfish uses a block size of 64 bits (8 bytes)
+    unsigned char inputBuffer[8]; //blowfish uses a block size of 64 bits (8 bytes)
     unsigned char outputBuffer[8];
 
     int bytesRead;
@@ -31,6 +32,7 @@ void encryptFile(const char* inputFileName, const char* outputFileName, const un
             bytesRead++;
             padding--;
         }
+//encryption 
         BF_ecb_encrypt(inputBuffer, outputBuffer, &bfKey, BF_ENCRYPT);
         fwrite(outputBuffer, sizeof(unsigned char), 8, outputFile);
     }
