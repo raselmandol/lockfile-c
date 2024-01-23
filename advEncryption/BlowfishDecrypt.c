@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//blowfish.h -->add
 #include <openssl/blowfish.h>
 
 #define MAX_FILENAME_LENGTH 100
@@ -32,6 +33,7 @@ void decryptFile(const char* inputFileName, const char* outputFileName, const un
         }
         fwrite(outputBuffer, sizeof(unsigned char), bytesRead, outputFile);
     }
+//close files, pointers
     fclose(inputFile);
     fclose(outputFile);
 
