@@ -80,12 +80,14 @@ int main() {
     const char *encrypted_file = "encrypted.txt";
     const char *decrypted_file = "decrypted.txt";
 
+    //encrypt a file
     if (aes_encrypt_file(input_file, encrypted_file, key) == 0) {
         printf("Encryption successful.\n");
     } else {
         printf("Encryption failed.\n");
     }
 
+//decrypt the file
     if (aes_decrypt_file(encrypted_file, decrypted_file, key) == 0) {
         printf("Decryption successful.\n");
     } else {
