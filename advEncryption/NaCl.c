@@ -26,7 +26,7 @@ int nacl_encrypt_file(const char *input_filename, const char *output_filename, c
     while (1) {
         size_t bytes_read = fread(input_buffer, 1, sizeof(input_buffer), input_file);
         if (bytes_read == 0) {
-            break; // End of file
+            break; //end of file
         }
         crypto_secretbox_easy(output_buffer, input_buffer, bytes_read, nonce, key);
 
@@ -55,6 +55,7 @@ int nacl_decrypt_file(const char *input_filename, const char *output_filename, c
         if (bytes_read == 0) {
             break;
         }
+//decrypt the file 
 
         if (crypto_secretbox_open_easy(output_buffer, input_buffer, bytes_read, header, key) != 0) {
             printf("Decryption failed.\n");
