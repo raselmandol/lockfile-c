@@ -1,6 +1,8 @@
+//RSA Encryption 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//RSA support 
 #include <openssl/rsa.h>
 #include <openssl/pem.h>
 
@@ -33,6 +35,7 @@ int main() {
         RSA_free(rsa);
         return 1;
     }
+//RSA Len 
 
     int rsaLen = RSA_size(rsa);
     unsigned char* inputBuffer = (unsigned char*)malloc(rsaLen);
