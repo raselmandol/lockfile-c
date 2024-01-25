@@ -21,8 +21,11 @@ int calculateSHA256(const char* fileName, unsigned char* sha256Digest) {
     while ((bytesRead = fread(buffer, 1, sizeof(buffer), file)) > 0) {
         SHA256_Update(&sha256, buffer, bytesRead);
     }
+    //SHA256 Digest
 
     SHA256_Final(sha256Digest, &sha256);
+//close file
+
 
     fclose(file);
     return 1;
