@@ -59,6 +59,7 @@ void process_directory(char *directory_path, char *password, void (*process_func
     struct dirent *ent;
     struct stat st;
 
+        //opening directory and iterate over files
     dir = opendir(directory_path);
     if (dir == NULL) {
         printf("Error: could not open directory %s.\n", directory_path);
