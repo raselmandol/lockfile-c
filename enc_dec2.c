@@ -19,7 +19,7 @@ void encrypt_file(FILE *input, FILE *output, char *password) {
 }
 
 void decrypt_file(FILE *input, FILE *output, char *password) {
-  //encryption and decryption use the same logic
+
     encrypt_file(input, output, password);  
 }
 
