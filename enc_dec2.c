@@ -70,7 +70,7 @@ void process_directory(char *directory_path, char *password, void (*process_func
         char filename[MAX_FILENAME_LEN];
         snprintf(filename, MAX_FILENAME_LEN, "%s/%s", directory_path, ent->d_name);
 
-        //checking if file is a regular file (not a directory or other special file)
+        
         if (stat(filename, &st) == 0 && S_ISREG(st.st_mode)) {
             process_file(filename, password, process_function);
         }
