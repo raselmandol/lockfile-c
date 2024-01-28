@@ -31,8 +31,6 @@ void process_file(char *filename, char *password, void (*process_function)(FILE 
     char *extension = (process_function == encrypt_file) ? ENCRYPTED_EXTENSION : DECRYPTED_EXTENSION;
     strncpy(out_filename, filename, MAX_FILENAME_LEN - strlen(extension) - 1);
     strcat(out_filename, extension);
-
-    //opening input and output files
     fp = fopen(filename, "rb");
     if (fp == NULL) {
         printf("Error: could not open input file %s.\n", filename);
