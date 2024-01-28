@@ -43,10 +43,8 @@ void process_file(char *filename, char *password, void (*process_function)(FILE 
         exit(1);
     }
 
-    //processing file
     process_function(fp, fp_out, password);
 
-    //closing files
     fclose(fp);
     fclose(fp_out);
 }
@@ -55,8 +53,6 @@ void process_directory(char *directory_path, char *password, void (*process_func
     DIR *dir;
     struct dirent *ent;
     struct stat st;
-
-        //opening directory and iterate over files
     dir = opendir(directory_path);
     if (dir == NULL) {
         printf("Error: could not open directory %s.\n", directory_path);
