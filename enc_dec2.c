@@ -27,7 +27,6 @@ void process_file(char *filename, char *password, void (*process_function)(FILE 
     FILE *fp, *fp_out;
     char out_filename[MAX_FILENAME_LEN];
 
-    //constructing output filename based on the process function
     char *extension = (process_function == encrypt_file) ? ENCRYPTED_EXTENSION : DECRYPTED_EXTENSION;
     strncpy(out_filename, filename, MAX_FILENAME_LEN - strlen(extension) - 1);
     strcat(out_filename, extension);
