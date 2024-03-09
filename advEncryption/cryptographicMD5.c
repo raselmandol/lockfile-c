@@ -22,6 +22,7 @@ int calculateMD5(const char* fileName, unsigned char* md5Digest) {
     return 1;
 }
 int main() {
+    //set_input file
     const char* fileName = "file.txt";
     unsigned char md5Digest[MD5_DIGEST_LENGTH];
     if (calculateMD5(fileName, md5Digest)) {
