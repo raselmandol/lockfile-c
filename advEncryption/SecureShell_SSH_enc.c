@@ -25,6 +25,7 @@ void encryptFile(const char* inputFileName, const char* outputFileName, const un
     if (EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key, iv) != 1) {
         handleErrors();
     }
+    //set_input&output_file
 
     inputFile = fopen(inputFileName, "rb");
     outputFile = fopen(outputFileName, "wb");
