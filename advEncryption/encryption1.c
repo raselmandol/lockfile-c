@@ -35,6 +35,8 @@ void encryptFile(char *filename, int key) {
     //Read and encrypt each byte from the input file
     int ch;
     while ((ch = fgetc(inputFile)) != EOF) {
+        //new_key? 
+        //see_the_logic_here
         ch = (ch + key) % 256;
         fputc(ch, outputFile);
     }
