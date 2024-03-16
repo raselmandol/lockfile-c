@@ -97,6 +97,9 @@ int main() {
     printf("Enter the filename: ");
     scanf("%s", filename);
 
+    //key_input
+    //save_key
+    //key_format_int
     printf("Enter the encryption key: ");
     scanf("%d", &key);
 
