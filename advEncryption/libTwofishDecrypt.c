@@ -19,9 +19,10 @@ void decryptFile(const char* inputFileName, const char* outputFileName, const un
     }
 
     TwofishInstance ctx;
+    //pass key and keyLength
     TwofishInitialise(&ctx, key, keyLength);
 
-    unsigned char inputBuffer[16]; // Twofish uses a block size of 128 bits (16 bytes)
+    unsigned char inputBuffer[16]; //Twofish uses a block size of 128 bits (16 bytes)
     unsigned char outputBuffer[16];
 
     int bytesRead;
