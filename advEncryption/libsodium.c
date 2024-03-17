@@ -3,6 +3,7 @@
 #include <string.h>
 #include <sodium.h>
 
+//define_key_size
 #define KEY_SIZE 32
 #define NONCE_SIZE crypto_aead_aes256gcm_NPUBBYTES
 int aes_encrypt_file(const char *input_filename, const char *output_filename, const unsigned char *key) {
@@ -76,6 +77,7 @@ int main() {
         0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17,
         0x18, 0x19, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0x1F
     };
+    //set inputFile_location, encrypted file
     const char *input_file = "input.txt";
     const char *encrypted_file = "encrypted.txt";
     const char *decrypted_file = "decrypted.txt";
