@@ -21,10 +21,12 @@ void encryptFile(const char* inputFileName, const char* outputFileName, const un
     TwofishInstance ctx;
     TwofishInitialise(&ctx, key, keyLength);
 
+    //input_and_output buffer
     unsigned char inputBuffer[16];
     unsigned char outputBuffer[16];
 
     int bytesRead;
+    //padding_set
     while ((bytesRead = fread(inputBuffer, sizeof(unsigned char), 16, inputFile)) > 0) {
         int padding = 16 - bytesRead;
         while (padding > 0) {
@@ -35,6 +37,7 @@ void encryptFile(const char* inputFileName, const char* outputFileName, const un
         TwofishEncrypt(&ctx, inputBuffer, outputBuffer);
         fwrite(outputBuffer, sizeof(unsigned char), 16, outputFile);
     }
+    //close_file_pointers
     fclose(inputFile);
     fclose(outputFile);
 
@@ -42,6 +45,7 @@ void encryptFile(const char* inputFileName, const char* outputFileName, const un
 }
 
 int main() {
+    //set_input_file
     const char* inputFileName = "input.txt";
     const char* encryptedFileName = "encrypted.bin";
 
