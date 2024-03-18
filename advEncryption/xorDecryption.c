@@ -32,13 +32,12 @@ void encryptFile(const char* inputFileName, const char* outputFileName, unsigned
 }
 
 void decryptFile(const char* inputFileName, const char* outputFileName, unsigned char key) {
-    //Calling the encryption function with the same key
     encryptFile(inputFileName, outputFileName, key);
-
     printf("File decrypted successfully: %s\n", outputFileName);
 }
 
 int main() {
+    //set input & decrypted file_loc
     const char* inputFileName = "encrypted.txt";
     const char* decryptedFileName = "decrypted.txt";
     unsigned char key = 0xAB;  //Example key value
