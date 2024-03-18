@@ -39,10 +39,11 @@ void decryptFile(const char* inputFileName, const char* outputFileName, unsigned
 }
 
 int main() {
+    //set inputFile loc & key
     const char* inputFileName = "input.txt";
     const char* encryptedFileName = "encrypted.txt";
     const char* decryptedFileName = "decrypted.txt";
-    unsigned char key = 0xAB;  // Example key value
+    unsigned char key = 0xAB;  //example key value
 
     //Encrypting the file
     encryptFile(inputFileName, encryptedFileName, key);
