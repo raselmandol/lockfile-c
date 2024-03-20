@@ -62,13 +62,13 @@ int aes_decrypt_file(const char *input_filename, const char *output_filename, co
     while (1) {
         size_t bytes_read = fread(input_buffer, 1, sizeof(input_buffer), input_file);
         if (bytes_read == 0) {
-            break; // End of file
+            break; //End of file
         }
         mbedtls_aes_crypt_cbc(&aes, MBEDTLS_AES_DECRYPT, sizeof(input_buffer), iv, input_buffer, output_buffer);
         size_t padding = output_buffer[sizeof(output_buffer) - 1];
         size_t output_size = sizeof(output_buffer) - padding;
 
-        fwrite(output_buffer, 1, output_size, output_file);
+        fwrite(output_buffer, 1, output_size, output_file); //write_obb_till_end_eof
     }
     mbedtls_aes_free(&aes);
     fclose(input_file);
