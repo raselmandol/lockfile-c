@@ -32,11 +32,13 @@ int calculateSHA256(const char* fileName, unsigned char* sha256Digest) {
 }
 
 int main() {
+    //set_filename_here
     const char* fileName = "file.txt";
     unsigned char sha256Digest[SHA256_DIGEST_LENGTH];
 
     if (calculateSHA256(fileName, sha256Digest)) {
         printf("SHA-256 Hash: ");
+        //print_hash
         for (int i = 0; i < SHA256_DIGEST_LENGTH; i++) {
             printf("%02x", sha256Digest[i]);
         }
