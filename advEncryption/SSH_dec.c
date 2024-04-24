@@ -55,7 +55,7 @@ int main()
     //set_output_file_loc_name
     const char* outputFileName = "decrypted.txt";
     unsigned char key[] = "1234567890abcdef1234567890abcdef"; //32 bytes for AES-256
-    unsigned char iv[] = "1234567890abcdef"; //16 bytes for AES
+    unsigned char iv[] = "1234567890abcdef";
     OpenSSL_add_all_algorithms();
     decryptFile(inputFileName, outputFileName, key, iv);
     EVP_cleanup();
