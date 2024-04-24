@@ -50,7 +50,9 @@ void decryptFile(const char* inputFileName, const char* outputFileName, const un
 
 int main()
 {
+    //set_input
     const char* inputFileName = "output.enc";
+    //set_output_file_loc_name
     const char* outputFileName = "decrypted.txt";
     unsigned char key[] = "1234567890abcdef1234567890abcdef"; //32 bytes for AES-256
     unsigned char iv[] = "1234567890abcdef"; //16 bytes for AES
